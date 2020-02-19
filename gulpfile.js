@@ -36,11 +36,8 @@ var settings = {
         lg: {
             width: '1200px', /* -> @media (max-width: 1100px) */
         },
-        mlg: {
-          width: '1050px',
-        },
         md: {
-            width: '960px'
+          width: '1050px',
         },
         sm: {
             width: '768px',

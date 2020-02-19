@@ -3,8 +3,7 @@ $atom: (100% / $columns)
 
 $break_elg: 1450px
 $break_lg: 1200px
-$break_mlg: 1050px
-$break_md: 960px
+$break_md: 1050px
 $break_sm: 768px
 $break_xs: 560px
 $break_xxs: 420px
@@ -12,7 +11,6 @@ $break_xxs: 420px
 $offset: 30px
 $offset_elg: $offset
 $offset_lg: $offset
-$offset_mlg: $offset
 $offset_md: $offset
 $offset_sm: 0px
 $offset_xs: 0px
@@ -21,7 +19,6 @@ $offset_xxs: 0px
 $offset_one_side: ($offset / 2)
 $offset_elg_one_side: ($offset_elg / 2)
 $offset_lg_one_side: ($offset_lg / 2)
-$offset_mlg_one_side: ($offset_mlg / 2)
 $offset_md_one_side: ($offset_md / 2)
 $offset_sm_one_side: ($offset_sm / 2)
 $offset_xs_one_side: ($offset_xs / 2)
@@ -125,10 +122,6 @@ $fields_xxs: 15px
     $val: 100% / $columns * $n
     +lg(width, #{calc(#{$val} - #{$offset_lg})})
 
-=size-mlg($n)
-    $val: 100% / $columns * $n
-    +mlg(width, #{calc(#{$val} - #{$offset_mlg})})
-
 =size-md($n)
     $val: 100% / $columns * $n
     +md(width, #{calc(#{$val} - #{$offset_md})})
@@ -222,32 +215,6 @@ $fields_xxs: 15px
 =shift-lg-padding-right($n)
     $val: 100% / $columns * $n
     +lg(padding-right, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-mlg($n)
-    $val: 100% / $columns * $n
-    +mlg(margin-left, #{calc(#{$val} + #{$offset_mlg_one_side})})
-    +mlg(margin-right, #{calc(#{$val} + #{$offset_mlg_one_side})})
-
-=shift-mlg-left($n)
-    $val: 100% / $columns * $n
-    +mlg(margin-left, #{calc(#{$val} + #{$offset_mlg_one_side})})
-
-=shift-mlg-right($n)
-    $val: 100% / $columns * $n
-    +mlg(margin-right, #{calc(#{$val} + #{$offset_mlg_one_side})})
-
-=shift-mlg-padding($n)
-    $val: 100% / $columns * $n
-    +mlg(padding-left, #{calc(#{$val} + #{$offset_mlg_one_side})})
-    +mlg(padding-right, #{calc(#{$val} + #{$offset_mlg_one_side})})
-
-=shift-mlg-padding-left($n)
-    $val: 100% / $columns * $n
-    +mlg(padding-left, #{calc(#{$val} + #{$offset_mlg_one_side})})
-
-=shift-mlg-padding-right($n)
-    $val: 100% / $columns * $n
-    +mlg(padding-right, #{calc(#{$val} + #{$offset_mlg_one_side})})
 
 =shift-md($n)
     $val: 100% / $columns * $n
@@ -367,14 +334,6 @@ $fields_xxs: 15px
 
 =lg-block()
     @media screen and (max-width: $break_lg)
-        @content
-
-=mlg($name, $value)
-    @media screen and (max-width: $break_mlg)
-        #{$name}: $value
-
-=mlg-block()
-    @media screen and (max-width: $break_mlg)
         @content
 
 =md($name, $value)

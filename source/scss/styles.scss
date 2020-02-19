@@ -54,25 +54,56 @@ body, div, h1, h2, h3, h4, p, input {
 
   @include elg(height, 755px);
   @include lg(height, 600px);
-  @include mlg-block{
+  @include md-block{
     height: 47.7vw;
     // max-height: 500px;
   };
 }
 
-//---animations
-@keyframes showMenu{
-  to{
-    transform: translate(0%, -50%);
+/* .myPageWrapper{
+  width: 100%;
+  height: auto;
+}
+
+.wrapper{
+  width: 100%;
+  height: auto;
+} */
+
+//---animations---
+
+
+@include from(769px){
+  @keyframes showMenu{
+    to{
+      transform: translate(0%, -50%);
+    }
+  }
+  
+  @keyframes hideMenu{
+    from{
+      transform: translate(0%, -50%);
+    }
+    to{
+      transform: translate(125%, -50%);
+    }
   }
 }
 
-@keyframes hideMenu{
-  from{
-    transform: translate(0%, -50%);
+@include sm-block{
+  @keyframes showMenu{
+    to{
+      transform: translate(0%, -50%);
+    }
   }
-  to{
-    transform: translate(120%, -50%);
+  
+  @keyframes hideMenu{
+    from{
+      transform: translate(0%, -50%);
+    }
+    to{
+      transform: translate(140%, -50%);
+    }
   }
 }
 
@@ -118,7 +149,7 @@ body, div, h1, h2, h3, h4, p, input {
   }
 }
 
-@include lg-block{
+@include md-block{
   @keyframes showClose{
     to{
       transform: translate(-65px, -10px) rotate(-360deg);
@@ -128,6 +159,20 @@ body, div, h1, h2, h3, h4, p, input {
   @keyframes hideClose{
     to{
       transform: translate(-65px, -10px) rotate(360deg);
+    }
+  }
+}
+
+@include sm-block{
+  @keyframes showClose{
+    to{
+      transform: translate(-65px, -20px) rotate(-360deg);
+    }
+  }
+
+  @keyframes hideClose{
+    to{
+      transform: translate(-65px, -20px) rotate(360deg);
     }
   }
 }
@@ -162,7 +207,7 @@ body, div, h1, h2, h3, h4, p, input {
   padding: 100px 0 0 0;
   top: 50%;
   right: 0;
-  transform: translate(120%, -50%);
+  transform: translate(125%, -50%);
   background-color: white;
   z-index: 20;
   text-align: center;
@@ -176,11 +221,19 @@ body, div, h1, h2, h3, h4, p, input {
     padding: 35px 0 0 0;
   };
 
-  @include mlg-block{
+  @include md-block{
     height: 47.7vw;
     padding: 20px 0 0 0;
     max-width: none;
     width: 40vw;
+  }
+
+  @include sm-block{
+    height: 100vh;
+    padding: 50px 0 0 0;
+    max-width: none;
+    width: 70vw;
+    transform: translate(140%, -50%);
   }
 
   &__close{
@@ -200,7 +253,9 @@ body, div, h1, h2, h3, h4, p, input {
 
     @include lg(transform, translate(-65px, -20px));
 
-    @include mlg(transform, translate(-65px, -10px));
+    @include md(transform, translate(-65px, -10px));
+
+    @include sm(transform, translate(-65px, -20px));
 
     &:hover{
       box-shadow: 0px 0px 10px 0px rgb(227, 227, 236);
@@ -227,8 +282,13 @@ body, div, h1, h2, h3, h4, p, input {
     
     color: #026FB9;
 
-    @include mlg-block{
+    @include md-block{
       font-size: 2vw;
+      line-height: 1;
+    }
+
+    @include sm-block{
+      font-size: 5vw;
       line-height: 1;
     }
   }
@@ -237,7 +297,9 @@ body, div, h1, h2, h3, h4, p, input {
     // border: 1px solid red;
     display: inline-block;
 
-    @include mlg(margin-top, 2.5vw)
+    @include md(margin-top, 2.5vw);
+
+    @include sm(margin-top, 40px);
   }
 
   &__item{
@@ -251,10 +313,16 @@ body, div, h1, h2, h3, h4, p, input {
     padding: 20px;
     cursor: pointer;
 
-    @include mlg-block{
+    @include md-block{
       font-size: 2.3vw;
       line-height: 1;
       padding: 2vw 0;
+    }
+
+    @include sm-block{
+      font-size: 4.5vw;
+      line-height: 1;
+      padding: 20px 0;
     }
 
     &:hover{
@@ -321,16 +389,22 @@ body, div, h1, h2, h3, h4, p, input {
     font-size: 15px;
   }
 
-  @include mlg(font-size, 1.2vw);
+  @include md(font-size, 1.2vw);
 
   &_fs24{
     font-size: 24px;
     line-height: 32px;
 
-    @include mlg-block{
+    @include md-block{
       font-size: 1.4vw;
       line-height: 1.2;
       margin-top: 1.5vw;
+    }
+
+    @include sm-block{
+      font-size: 2.3vw;
+      line-height: 1.3;
+      margin-top: 20px;
     }
   }
 
@@ -338,7 +412,13 @@ body, div, h1, h2, h3, h4, p, input {
     margin-top: 25px;
 
     @include elg(margin-top, 10px);
-    @include mlg(margin-top, .6vw);
+    @include md(margin-top, .6vw);
+
+    @include sm-block{
+      font-size: 2.15vw;
+      line-height: 1.25;
+      margin-top: 10px;
+    }
   }
 
   &_margin-top10{
@@ -357,6 +437,8 @@ body, div, h1, h2, h3, h4, p, input {
   font-size: 16px;
   letter-spacing: 1px;
   line-height: 39px;
+  text-align: center;
+  color: white;
 
   transition: .3s;
 
@@ -392,11 +474,17 @@ body, div, h1, h2, h3, h4, p, input {
     padding: 30px;
   }
 
-  @include mlg-block{
+  @include md-block{
     width: 75vw;
     max-width: 850px;
     padding: 30px 15px;
   }
+
+  @include sm-block{
+    width: 100%;
+    height: 960px;
+    padding: 60px 30px;
+  };
 
   &__burger{
     position: absolute;
@@ -406,6 +494,11 @@ body, div, h1, h2, h3, h4, p, input {
     @include lg-block{
       top: 3%;
       right: 3%;
+    }
+
+    @include sm-block{
+      top: 5vw;
+      right: 5vw;
     }
   }
 
@@ -451,6 +544,11 @@ body, div, h1, h2, h3, h4, p, input {
       width: 50%;
       top: 5px;
     };
+
+    @include sm-block{
+      width: 55%;
+      top: 15px;
+    }
   }
 
   &__upperline{
@@ -468,7 +566,7 @@ body, div, h1, h2, h3, h4, p, input {
     transform: translate(-50%, -50%);
     width: 465px;
 
-    @include mlg(width, 50%);
+    @include md(width, 50%);
   }
 
   &__numof{
@@ -479,7 +577,7 @@ body, div, h1, h2, h3, h4, p, input {
     transform: translateX(-50%);
     color: #FFFFFF;
 
-    @include mlg-block{
+    @include md-block{
       bottom: 12%;
     }
   }
@@ -508,10 +606,16 @@ body, div, h1, h2, h3, h4, p, input {
       width: 160px;
       height: 40px;
 
-      @include mlg-block{
+      @include md-block{
         width: 10vw;
         height: 2.5vw;
         bottom: 7%;
+      }
+
+      @include sm-block{
+        width: 15vw;
+        height: 3.75vw;
+        bottom: 5%;
       }
     }
 
@@ -520,9 +624,14 @@ body, div, h1, h2, h3, h4, p, input {
       height: 23px;
       bottom: 7%;
 
-      @include mlg-block{
+      @include md-block{
         width: 8vw;
         height: 2vw;
+      }
+
+      @include sm-block{
+        width: 12vw;
+        height: 2.75vw;
       }
     }
   }
@@ -539,7 +648,6 @@ body, div, h1, h2, h3, h4, p, input {
     transform: translateX(-50%);
     cursor: pointer;
     transition: .3s;
-
     
     background-color: #026FB9;
     border-radius: 50%;
@@ -549,6 +657,8 @@ body, div, h1, h2, h3, h4, p, input {
     0px 4px 8px rgba(0, 0, 0, 0.04), 
     0px 16px 24px rgba(0, 0, 0, 0.04),
     0px 24px 32px rgba(0, 0, 0, 0.04);
+
+    @include sm(bottom, 12%);
 
     &:hover{
       box-shadow: 0px 0px 10px 0px rgb(227, 227, 236);
@@ -561,6 +671,8 @@ body, div, h1, h2, h3, h4, p, input {
       transform: translate(-50%, -50%);
       fill: white;
       width: 30%;
+
+      @include sm(transform, translate(-50%, -50%) rotate(90deg))
     }
   }
 
@@ -573,9 +685,14 @@ body, div, h1, h2, h3, h4, p, input {
     transform: translate(-50%, -50%);
     color: white;
 
-    @include mlg-block{
+    @include md-block{
       top: 15%;
       transform: translateX(-50%);
+    }
+
+    @include sm-block{
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -588,8 +705,13 @@ body, div, h1, h2, h3, h4, p, input {
     text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.35);
     text-transform: uppercase;
 
-    @include mlg-block{
+    @include md-block{
       font-size: 9.5vw;
+      line-height: 1.1;
+    }
+
+    @include sm-block{
+      font-size: 12vw;
       line-height: 1.1;
     }
   }
@@ -603,8 +725,14 @@ body, div, h1, h2, h3, h4, p, input {
     margin-top: 20px;
     text-transform: uppercase;
 
-    @include mlg-block{
+    @include md-block{
       font-size: 3vw;
+      line-height: 1.3;
+      margin-top: 2.5vw;
+    }
+
+    @include sm-block{
+      font-size: 4vw;
       line-height: 1.3;
       margin-top: 2.5vw;
     }
@@ -618,10 +746,16 @@ body, div, h1, h2, h3, h4, p, input {
     letter-spacing: 1px;
     margin-top: 20px;
 
-    @include mlg-block{
+    @include md-block{
       font-size: 2vw;
       line-height: 0;
-      margin-top: 2.5vw;
+      margin-top: 4.5vw;
+    }
+
+    @include sm-block{
+      font-size: 3vw;
+      line-height: 0;
+      margin-top: 4.5vw;
     }
   }
 }
@@ -641,8 +775,12 @@ body, div, h1, h2, h3, h4, p, input {
       left: 115px;
     }
 
-    @include mlg-block{
+    @include md-block{
       left: 30px;
+    }
+
+    @include sm-block{
+      width: calc(100% - 60px);
     }
   }
 
@@ -651,10 +789,15 @@ body, div, h1, h2, h3, h4, p, input {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 1px;
+    color: white;
 
-    @include mlg-block{
+    @include md-block{
       font-size: 2.8vw;
       line-height: 1.1;
+    }
+
+    @include sm-block{
+      font-size: 4.5vw;
     }
   }
 }
@@ -676,8 +819,12 @@ body, div, h1, h2, h3, h4, p, input {
     letter-spacing: 1px;
     color: #014F8D;
 
-    @include mlg-block{
+    @include md-block{
       font-size: 4.5vw;
+    }
+
+    @include sm-block{
+      font-size: 6vw;
     }
   }
 }
@@ -695,15 +842,19 @@ body, div, h1, h2, h3, h4, p, input {
     z-index: 10;
 
     @include lg(margin-top, 10px);
-    @include mlg(margin-top, 15px);
+    @include md(margin-top, 15px);
   }
 
   &__left{
     width: 43%;
+
+    @include sm(width, 40%);
   }
 
   &__right{
     width: 55%;
+
+    @include sm(width, 59%);
   }
 
   &__img{
@@ -726,9 +877,15 @@ body, div, h1, h2, h3, h4, p, input {
     line-height: 40px;
     letter-spacing: 1px;
     max-width: calc(100% - 60px);
+    color: white;
 
-    @include mlg-block{
+    @include md-block{
       font-size: 2.5vw;
+      line-height: 1;
+    }
+
+    @include sm-block{
+      font-size: 5vw;
       line-height: 1;
     }
   }
@@ -750,10 +907,14 @@ body, div, h1, h2, h3, h4, p, input {
 
   &__left{
     width: 45%;
+
+    @include sm(width, 54%);
   }
 
   &__right{
     width: 53%;
+    
+    @include sm(width, 44%);
   }
 
   &__img{
@@ -766,8 +927,9 @@ body, div, h1, h2, h3, h4, p, input {
     line-height: 40px;
     letter-spacing: 1px;
     max-width: calc(100% - 60px);
+    color: white;
 
-    @include mlg-block{
+    @include md-block{
       font-size: 2.5vw;
       line-height: 1;
       margin-top: 30px;
@@ -777,6 +939,8 @@ body, div, h1, h2, h3, h4, p, input {
       width: 53%;
       margin-left: auto;
       margin-right: 0;
+
+      @include sm(width, 44%);
     }
   }
 
@@ -791,6 +955,8 @@ body, div, h1, h2, h3, h4, p, input {
 
   &__p1{
     margin-top: 0;
+
+    @include sm(margin-top, 0);
   }
 
   &__button{
