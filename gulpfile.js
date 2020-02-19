@@ -30,8 +30,14 @@ var settings = {
         fields: '30px' /* side fields */
     },
     breakPoints: {
+        elg: {
+          width: '1450px',
+        },
         lg: {
-            width: '1100px', /* -> @media (max-width: 1100px) */
+            width: '1200px', /* -> @media (max-width: 1100px) */
+        },
+        mlg: {
+          width: '1050px',
         },
         md: {
             width: '960px'

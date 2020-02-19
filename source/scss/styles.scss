@@ -52,13 +52,15 @@ body, div, h1, h2, h3, h4, p, input {
 
 #wrapper{
 
-  @include to(1450px){
-    // height: 55vw !important;
-    height: 85%;
-  }
+  @include elg(height, 755px);
+  @include lg(height, 600px);
+  @include mlg-block{
+    height: 47.7vw;
+    // max-height: 500px;
+  };
 }
 
-
+//---animations
 @keyframes showMenu{
   to{
     transform: translate(0%, -50%);
@@ -74,15 +76,59 @@ body, div, h1, h2, h3, h4, p, input {
   }
 }
 
-@keyframes showClose{
-  to{
-    transform: translate(-60px, -10px) rotate(-360deg);
+@include from(1451px){
+  @keyframes showClose{
+    to{
+      transform: translate(-65px, -40px) rotate(-360deg);
+    }
+  }
+
+  @keyframes hideClose{
+    to{
+      transform: translate(-65px, -10px) rotate(360deg);
+    }
   }
 }
 
-@keyframes hideClose{
-  to{
-    transform: translate(-60px, -10px) rotate(360deg);
+@include elg-block{
+  @keyframes showClose{
+    to{
+      transform: translate(-65px, -50px) rotate(-360deg);
+    }
+  }
+
+  @keyframes hideClose{
+    to{
+      transform: translate(-65px, -50px) rotate(360deg);
+    }
+  }
+}
+
+@include lg-block{
+  @keyframes showClose{
+    to{
+      transform: translate(-65px, -20px) rotate(-360deg);
+    }
+  }
+
+  @keyframes hideClose{
+    to{
+      transform: translate(-65px, -20px) rotate(360deg);
+    }
+  }
+}
+
+@include lg-block{
+  @keyframes showClose{
+    to{
+      transform: translate(-65px, -10px) rotate(-360deg);
+    }
+  }
+
+  @keyframes hideClose{
+    to{
+      transform: translate(-65px, -10px) rotate(360deg);
+    }
   }
 }
 
@@ -106,6 +152,7 @@ body, div, h1, h2, h3, h4, p, input {
   animation-fill-mode: forwards;
 }
 
+//---components----
 .menu{
   // display: none;
   position: fixed;
@@ -117,19 +164,43 @@ body, div, h1, h2, h3, h4, p, input {
   right: 0;
   transform: translate(120%, -50%);
   background-color: white;
-  z-index: 1;
+  z-index: 20;
   text-align: center;
+
+  @include elg-block{
+    height: 755px;
+  }
+
+  @include lg-block{
+    height: 600px;
+    padding: 35px 0 0 0;
+  };
+
+  @include mlg-block{
+    height: 47.7vw;
+    padding: 20px 0 0 0;
+    max-width: none;
+    width: 40vw;
+  }
 
   &__close{
     position: absolute;
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    transform: translate(-60px, -10px);
+    transform: translate(-65px, -40px);
     // text-align: center;
     cursor: pointer;
     // transition: .3s;
     background-color: white;
+
+    @include elg-block{
+      transform: translate(-65px, -50px);
+    }
+
+    @include lg(transform, translate(-65px, -20px));
+
+    @include mlg(transform, translate(-65px, -10px));
 
     &:hover{
       box-shadow: 0px 0px 10px 0px rgb(227, 227, 236);
@@ -155,11 +226,18 @@ body, div, h1, h2, h3, h4, p, input {
     letter-spacing: 1px;
     
     color: #026FB9;
+
+    @include mlg-block{
+      font-size: 2vw;
+      line-height: 1;
+    }
   }
 
   &__items{
     // border: 1px solid red;
     display: inline-block;
+
+    @include mlg(margin-top, 2.5vw)
   }
 
   &__item{
@@ -172,6 +250,12 @@ body, div, h1, h2, h3, h4, p, input {
     color: #747474;
     padding: 20px;
     cursor: pointer;
+
+    @include mlg-block{
+      font-size: 2.3vw;
+      line-height: 1;
+      padding: 2vw 0;
+    }
 
     &:hover{
       color: #026FB9;
@@ -232,13 +316,33 @@ body, div, h1, h2, h3, h4, p, input {
   margin-top: 30px;
   color: white;
 
+  @include lg-block{
+    line-height: 1.2;
+    font-size: 15px;
+  }
+
+  @include mlg(font-size, 1.2vw);
+
   &_fs24{
     font-size: 24px;
     line-height: 32px;
+
+    @include mlg-block{
+      font-size: 1.4vw;
+      line-height: 1.2;
+      margin-top: 1.5vw;
+    }
   }
 
   &_margin-top25{
     margin-top: 25px;
+
+    @include elg(margin-top, 10px);
+    @include mlg(margin-top, .6vw);
+  }
+
+  &_margin-top10{
+    margin-top: 10px;
   }
 }
 
@@ -265,21 +369,44 @@ body, div, h1, h2, h3, h4, p, input {
   }
 }
 
+//----helpers classes---
+.text-align_center{
+  text-align: center;
+}
+
+//---unique slide----
 .slide{
   position: relative;
   background: url(../images/my/bg/bg.jpg);
   width: 1344px;
   // height: 650px;
-  padding: 115px;
+  padding: 110px 60px;
 
-  @include to(1450px){
+  @include elg-block{
     width: 1135px;
+    padding: 60px;
+  }
+
+  @include lg-block{
+    width: 1000px;
+    padding: 30px;
+  }
+
+  @include mlg-block{
+    width: 75vw;
+    max-width: 850px;
+    padding: 30px 15px;
   }
 
   &__burger{
     position: absolute;
-    right: 10%;
-    top: 10%;    
+    right: 7%;
+    top: 7%;
+    
+    @include lg-block{
+      top: 3%;
+      right: 3%;
+    }
   }
 
   &__snowdrift{
@@ -314,6 +441,16 @@ body, div, h1, h2, h3, h4, p, input {
     left: 50%;
     transform: translateX(-50%);
     width: 65%;
+
+    @include elg-block{
+      width: 55%;
+      top: 10px;
+    };
+
+    @include lg-block{
+      width: 50%;
+      top: 5px;
+    };
   }
 
   &__upperline{
@@ -330,16 +467,21 @@ body, div, h1, h2, h3, h4, p, input {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 465px;
+
+    @include mlg(width, 50%);
   }
 
   &__numof{
     position: absolute;
     display: inline-block;
     left: 50%;
-    bottom: 15%;
+    bottom: 10%;
     transform: translateX(-50%);
     color: #FFFFFF;
-    
+
+    @include mlg-block{
+      bottom: 12%;
+    }
   }
 
   &__cur{
@@ -358,23 +500,35 @@ body, div, h1, h2, h3, h4, p, input {
 
   &__logo{
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
 
     &_big{
       width: 160px;
       height: 40px;
+
+      @include mlg-block{
+        width: 10vw;
+        height: 2.5vw;
+        bottom: 7%;
+      }
     }
 
     &_small{
       width: 93px;
       height: 23px;
+      bottom: 7%;
+
+      @include mlg-block{
+        width: 8vw;
+        height: 2vw;
+      }
     }
   }
 }
 
-.slide1{
+.uniq1{
 
   &__firstButton{
     position: absolute;
@@ -418,6 +572,11 @@ body, div, h1, h2, h3, h4, p, input {
     top: 50%;
     transform: translate(-50%, -50%);
     color: white;
+
+    @include mlg-block{
+      top: 15%;
+      transform: translateX(-50%);
+    }
   }
 
   &__title {
@@ -427,6 +586,12 @@ body, div, h1, h2, h3, h4, p, input {
     text-align: center;
     letter-spacing: 1px;
     text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.35);
+    text-transform: uppercase;
+
+    @include mlg-block{
+      font-size: 9.5vw;
+      line-height: 1.1;
+    }
   }
 
   &__subtitle{
@@ -436,6 +601,13 @@ body, div, h1, h2, h3, h4, p, input {
     text-align: center;
     letter-spacing: 1px;
     margin-top: 20px;
+    text-transform: uppercase;
+
+    @include mlg-block{
+      font-size: 3vw;
+      line-height: 1.3;
+      margin-top: 2.5vw;
+    }
   }
 
   &__date{
@@ -445,10 +617,16 @@ body, div, h1, h2, h3, h4, p, input {
     text-align: center;
     letter-spacing: 1px;
     margin-top: 20px;
+
+    @include mlg-block{
+      font-size: 2vw;
+      line-height: 0;
+      margin-top: 2.5vw;
+    }
   }
 }
 
-.slide2{
+.uniq2{
 
   &__content{
     // border: 1px solid red;
@@ -462,6 +640,10 @@ body, div, h1, h2, h3, h4, p, input {
     @include from(1920px){
       left: 115px;
     }
+
+    @include mlg-block{
+      left: 30px;
+    }
   }
 
   &__title {
@@ -469,14 +651,17 @@ body, div, h1, h2, h3, h4, p, input {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 1px;
-  }
 
-  &__info{
-    
+    @include mlg-block{
+      font-size: 2.8vw;
+      line-height: 1.1;
+    }
   }
 }
 
-.slide3{
+//-----versions of slides----
+//---v1----
+.slide1{
   background: url(../images/my/bg/bg_2.png);
 
   &__title{
@@ -490,49 +675,39 @@ body, div, h1, h2, h3, h4, p, input {
     text-align: center;
     letter-spacing: 1px;
     color: #014F8D;
+
+    @include mlg-block{
+      font-size: 4.5vw;
+    }
   }
 }
 
-.slide4{
+//----v2----
+.slide2{
 
   &__content{
+    position: relative;
     // border: 1px solid red;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1160px;
-    margin-top: 10px;
+    margin-top: 20px;
+    z-index: 10;
 
-    @include from(1920px){
-      left: 115px;
-    }
+    @include lg(margin-top, 10px);
+    @include mlg(margin-top, 15px);
   }
 
   &__left{
-    width: 51%;
+    width: 43%;
   }
 
   &__right{
-    width: 46%;
-
-    &_textA_center{
-      text-align: center;
-    }
+    width: 55%;
   }
 
   &__img{
-    display: block;
-    // width: 30%;
-
-    &_slide5{
-      width: 100%;
-      max-width: 313px;
-    }
-
-    &_slide6{
-      width: 100%;
-      max-width: 404px;
-    }
+    width: 100%;
   }
 
   &_boldAnd_mt-0{
@@ -550,28 +725,39 @@ body, div, h1, h2, h3, h4, p, input {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 1px;
+    max-width: calc(100% - 60px);
+
+    @include mlg-block{
+      font-size: 2.5vw;
+      line-height: 1;
+    }
   }
 }
 
-.slide7{
+//----v3----
+.slide3{
 
   &__content{
+    position: relative;
     display: flex;
     justify-content: space-between;
+    width: 100%;
     margin-top: 20px;
+    z-index: 10;
+
+    @include lg(margin-top, 10px);
   }
 
   &__left{
-    width: 46%;
-
-    &_textA-center{
-      text-align: center;
-    }
+    width: 45%;
   }
 
   &__right{
-    width: 51%;
-    // text-align: right;
+    width: 53%;
+  }
+
+  &__img{
+    width: 100%;
   }
 
   &__title {
@@ -579,13 +765,18 @@ body, div, h1, h2, h3, h4, p, input {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 1px;
+    max-width: calc(100% - 60px);
+
+    @include mlg-block{
+      font-size: 2.5vw;
+      line-height: 1;
+      margin-top: 30px;
+    }
 
     &_right{
-      // border: 1px solid red;
-      width: 51%;
+      width: 53%;
       margin-left: auto;
       margin-right: 0;
-      // text-align: right;
     }
   }
 
@@ -594,21 +785,12 @@ body, div, h1, h2, h3, h4, p, input {
     max-width: 46%;
   }
 
-  &__bold{
+  &_bold{
     font-family: GothamPro-Bold, sans-serif;
   }
 
   &__p1{
     margin-top: 0;
-  }
-
-  &__img{
-    width: 100%;
-    max-width: 540px;
-
-    &_slide8{
-      max-width: 404px;
-    }
   }
 
   &__button{
@@ -617,7 +799,8 @@ body, div, h1, h2, h3, h4, p, input {
   }
 }
 
-.slide9{
+//---v4----
+.slide4{
   background: url(../images/my/bg/bg_2.png);
 
   &__bgText{
@@ -646,21 +829,23 @@ body, div, h1, h2, h3, h4, p, input {
     @include size(6);
 
     margin: 15px;
+  }  
+
+  &__title{ 
+    font-family: GothamPro-Bold, sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: #014F8D;
+  }
+
+  &__p{
+    font-family: GothamPro-Light, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #2F2F2F;
+    margin-top: 15px;
   }
 }
 
-.nineTitle{ 
-  font-family: GothamPro-Bold, sans-serif;
-  font-size: 32px;
-  letter-spacing: 1px;
-  color: #014F8D;
-}
-
-.nineP{
-  font-family: GothamPro-Light, sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 24px;
-  color: #2F2F2F;
-  margin-top: 15px;
-}
+//---other-------------------------------------------------
