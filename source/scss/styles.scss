@@ -456,10 +456,21 @@ body, div, h1, h2, h3, h4, p, input {
   text-align: center;
 }
 
+.snowdriftTObottom{
+  
+  @include xs-block{
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
 //---unique slide----
 .slide{
   position: relative;
-  background: url(../images/my/bg/bg.jpg);
+  background: url(../images/my/bg/bg.jpg) no-repeat;
   width: 1344px;
   // height: 650px;
   padding: 110px 60px;
@@ -484,7 +495,13 @@ body, div, h1, h2, h3, h4, p, input {
     width: 100%;
     height: 960px;
     padding: 60px 30px;
-  };
+  }
+
+  @include xs-block{
+    width: 100%;
+    height: auto;
+    padding: 60px 30px 0 30px;
+  }
 
   &__burger{
     position: absolute;
@@ -509,8 +526,21 @@ body, div, h1, h2, h3, h4, p, input {
     width: 100%;
     transform: translateX(-50%);
 
+    @include xs-block{
+      display: block;
+      position: relative;
+      width: calc(100% + 60px);
+      transform: translateX(-30px);
+      left: 0;
+      margin-top: 15vw;
+    }
+
     &_rev{
-      transform: translateX(-50%) scale(-1, 1);
+      transform: translateX(-50%) ;
+
+      @include xs-block{
+        transform: translateX(-30px) scale(-1, 1);
+      }
     }
   }
 
@@ -567,6 +597,7 @@ body, div, h1, h2, h3, h4, p, input {
     width: 465px;
 
     @include md(width, 50%);
+    @include xs(width, 90%);
   }
 
   &__numof{
@@ -638,6 +669,10 @@ body, div, h1, h2, h3, h4, p, input {
 }
 
 .uniq1{
+  @include xs-block{
+    background-size: cover;
+    height: 100vh !important;
+  }
 
   &__firstButton{
     position: absolute;
@@ -761,6 +796,10 @@ body, div, h1, h2, h3, h4, p, input {
 }
 
 .uniq2{
+  @include xs-block{
+    background-size: cover;
+    height: 100vh !important;
+  }
 
   &__content{
     // border: 1px solid red;
@@ -807,6 +846,12 @@ body, div, h1, h2, h3, h4, p, input {
 .slide1{
   background: url(../images/my/bg/bg_2.png);
 
+  @include xs-block{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
   &__title{
     position: absolute;
     left: 50%;
@@ -826,6 +871,11 @@ body, div, h1, h2, h3, h4, p, input {
     @include sm-block{
       font-size: 6vw;
     }
+
+    @include xs-block{
+      font-size: 9vw;
+      width: 100%;
+    }
   }
 }
 
@@ -843,18 +893,28 @@ body, div, h1, h2, h3, h4, p, input {
 
     @include lg(margin-top, 10px);
     @include md(margin-top, 15px);
+
+    @include xs-block{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__left{
     width: 43%;
 
     @include sm(width, 40%);
+    @include xs(width, 100%);
   }
 
   &__right{
     width: 55%;
 
     @include sm(width, 59%);
+    @include xs-block{
+      width: 100%;
+      margin-top: 15px;
+    };
   }
 
   &__img{
@@ -885,8 +945,7 @@ body, div, h1, h2, h3, h4, p, input {
     }
 
     @include sm-block{
-      font-size: 5vw;
-      line-height: 1;
+      font-size: 4vw;
     }
   }
 }
@@ -903,18 +962,27 @@ body, div, h1, h2, h3, h4, p, input {
     z-index: 10;
 
     @include lg(margin-top, 10px);
+
+    @include xs-block{
+      flex-wrap: wrap;
+    }
   }
 
   &__left{
     width: 45%;
 
     @include sm(width, 54%);
+    @include xs(width, 100%);
   }
 
   &__right{
     width: 53%;
     
     @include sm(width, 44%);
+    @include xs-block{
+      width: 100%;
+      margin-top: 15px;
+    }
   }
 
   &__img{
@@ -922,6 +990,7 @@ body, div, h1, h2, h3, h4, p, input {
   }
 
   &__title {
+    // border: 1px solid red;
     font-family: GothamPro-Medium, sans-serif;
     font-size: 32px;
     line-height: 40px;
@@ -935,12 +1004,21 @@ body, div, h1, h2, h3, h4, p, input {
       margin-top: 30px;
     }
 
+    @include sm-block{
+      font-size: 4vw;
+    }
+
     &_right{
       width: 53%;
       margin-left: auto;
       margin-right: 0;
 
       @include sm(width, 44%);
+      @include xs-block{
+        width: 100%;
+        margin-left: 0;
+        margin-right: auto;
+      };
     }
   }
 
