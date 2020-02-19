@@ -30,17 +30,26 @@ window.addEventListener('load', () => {
   for (let i = 0; i < burgers.length; i++) {
     burgers[i].addEventListener('click', () => {
       console.log(1)
+      burgersController(false)
+
       menu.classList.remove('hideMenu')
       menu.classList.add('showMenu')
-      burgersController(false)
+
+      close.classList.remove('hideClose')
+      close.classList.add('showClose')
+      
     })
   }
 
   close.addEventListener('click', () => {
     console.log(2)
     burgersController(true)
+
     menu.classList.remove('showMenu')
     menu.classList.add('hideMenu')
+
+    close.classList.remove('showClose')
+    close.classList.add('hideClose')
   })
 
 })

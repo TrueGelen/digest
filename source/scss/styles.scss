@@ -66,9 +66,34 @@ body, div, h1, h2, h3, h4, p, input {
 }
 
 @keyframes hideMenu{
+  from{
+    transform: translate(0%, -50%);
+  }
   to{
     transform: translate(120%, -50%);
   }
+}
+
+@keyframes showClose{
+  to{
+    transform: translate(-60px, -10px) rotate(-360deg);
+  }
+}
+
+@keyframes hideClose{
+  to{
+    transform: translate(-60px, -10px) rotate(360deg);
+  }
+}
+
+.showClose{
+  animation: showClose .4s linear;
+  animation-fill-mode: forwards;
+}
+
+.hideClose{
+  animation: hideClose .4s linear;
+  animation-fill-mode: forwards;
 }
 
 .showMenu{
@@ -242,7 +267,7 @@ body, div, h1, h2, h3, h4, p, input {
 
 .slide{
   position: relative;
-  background: url(../../images/my/bg/bg.jpg);
+  background: url(../images/my/bg/bg.jpg);
   width: 1344px;
   // height: 650px;
   padding: 115px;
