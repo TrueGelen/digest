@@ -51,7 +51,7 @@ body, div, h1, h2, h3, h4, p, input {
 }
 
 #wrapper{
-
+  height: 100vh;
   @include elg(height, 755px);
   @include lg(height, 600px);
   @include md-block{
@@ -203,7 +203,7 @@ body, div, h1, h2, h3, h4, p, input {
   position: fixed;
   max-width: 470px;
   width: 100%;
-  height: 92.2%;
+  height: 100vh;
   padding: 100px 0 0 0;
   top: 50%;
   right: 0;
@@ -213,6 +213,7 @@ body, div, h1, h2, h3, h4, p, input {
   text-align: center;
 
   @include elg-block{
+    top: 50%;
     height: 755px;
   }
 

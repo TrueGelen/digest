@@ -24,5 +24,6 @@ window.addEventListener('load', ()=>{
 
   window.addEventListener('resize', ()=>{
     position()
+    console.log(window.innerWidth)
   })
 })
