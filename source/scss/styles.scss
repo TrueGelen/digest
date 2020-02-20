@@ -696,13 +696,13 @@ body, div, h1, h2, h3, h4, p, input {
     transform: translateX(-50%);
     color: #FFFFFF;
 
+    &_pur{
+      color: #014F8D;
+    }
+
     @include md-block{
       bottom: 8%;
     }
-
-    /* @include sm-block{
-      bottom: 7%;
-    } */
 
     @include xs-block{
       bottom: 5%;
@@ -713,7 +713,7 @@ body, div, h1, h2, h3, h4, p, input {
     display: inline-block;
 
     font-family: GothamPro-Bold, sans-serif;
-    font-size: 22px;
+    font-size: 22px;    
   }
 
   &__of{
