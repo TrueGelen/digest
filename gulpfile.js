@@ -34,7 +34,7 @@ var settings = {
           width: '1450px',
         },
         lg: {
-            width: '1200px', /* -> @media (max-width: 1100px) */
+          width: '1200px', /* -> @media (max-width: 1100px) */
         },
         md: {
           width: '1050px',

@@ -32,53 +32,96 @@
         </div>
         <p class="menu__title">Меню</p>
         <div class="menu__items">
-          <a href="#socialmediamarketing"><p class="menu__item">Social Media Marketing</p></a>
-          <a href="#searchandcontext"><p class="menu__item">Search and Context</p></a>
-          <a href="media"><p class="menu__item">Media</p></a>
-          <a href="searchandOptimization"><p class="menu__item">Search and Optimization</p></a>
-          <a href="production"><p class="menu__item">Production</p></a>
-          <a href="smmcases"><p class="menu__item">SMM cases</p></a>
+          <a href="#socialmediamarketing">
+            <p class="menu__item">Social Media Marketing</p>
+          </a>
+          <a href="#searchandcontext">
+            <p class="menu__item">Search and Context</p>
+          </a>
+          <a href="media">
+            <p class="menu__item">Media</p>
+          </a>
+          <a href="searchandOptimization">
+            <p class="menu__item">Search and Optimization</p>
+          </a>
+          <a href="production">
+            <p class="menu__item">Production</p>
+          </a>
+          <a href="smmcases">
+            <p class="menu__item">SMM cases</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="burger" id="burger">
+        <div class="burger__lineBlock">
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
         </div>
       </div>
 
       <!-- slide 1 -->
-      <section class="slide uniq1">
-        <div class="slide__burger burger" id="burger">
-          <div class="burger__lineBlock">
-            <div class="burger__line"></div>
-            <div class="burger__line"></div>
-            <div class="burger__line"></div>
-          </div>
-        </div>        
+      <section class="slide uniq1 bg1" id="slideNumber1">
+
         <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
         <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
         <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
         <img src="images/my/bg/upperline.png" alt="upper line" class="slide__upperline">
         <img src="images/my/logo_nectarin.png" alt="logo nectarin" class="slide__logo slide__logo_big">
-        <a href="#second" class="link">
-          <div class="uniq1__firstButton">
-            <svg>
-              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
-            </svg>
-          </div>
+        <a href="#slideNumber2" class="uniq1__firstButton">
+          <svg>
+            <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+          </svg>
         </a>
         <div class="uniq1__content">
           <h1 class="uniq1__title">Дайджест</h1>
           <p class="uniq1__subtitle">новые технологии, тренды<br> и кейсы в digital-маркетинге</p>
           <p class="uniq1__date">Декабрь 2019 - Январь 2020</p>
         </div>
-        <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift snowdriftTObottom">
+
+        <div class="slide__numof">
+          <p class="slide__cur">1</p>
+          <p class="slide__of">/ 84</p>
+        </div>
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift snowdriftTObottom"> -->
       </section>
+
+      <section class="slide uniq1 bg1_2" id="slideNumber1">
+
+        <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
+        <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
+        <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
+        <img src="images/my/bg/upperline.png" alt="upper line" class="slide__upperline">
+        <img src="images/my/logo_nectarin.png" alt="logo nectarin" class="slide__logo slide__logo_big">
+        <a href="#slideNumber2" class="uniq1__firstButton">
+          <svg>
+            <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+          </svg>
+        </a>
+        <div class="uniq1__content">
+          <h1 class="uniq1__title">Дайджест</h1>
+          <p class="uniq1__subtitle">новые технологии, тренды<br> и кейсы в digital-маркетинге</p>
+          <p class="uniq1__date">Декабрь 2019 - Январь 2020</p>
+        </div>
+
+        <div class="slide__numof">
+          <p class="slide__cur">1</p>
+          <p class="slide__of">/ 84</p>
+        </div>
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift snowdriftTObottom"> -->
+      </section>
+
       <!-- slide 2 -->
-      <section class="slide uniq2" id="second">
-        <div class="slide__burger burger" id="burger">
+      <section class="slide uniq2 bg2" id="slideNumber2">
+        <!-- <div class="slide__burger burger" id="burger">
           <div class="burger__lineBlock">
             <div class="burger__line"></div>
             <div class="burger__line"></div>
             <div class="burger__line"></div>
           </div>
-        </div>
-        
+        </div> -->
+
         <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
         <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
         <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
@@ -99,18 +142,73 @@
           <p class="mainP mainP_fs24">Ну и немного информации об ожидаемых трендах 2020 года.</p>
         </div>
 
-        <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev snowdriftTObottom">
+        <div class="slide__buttons">
+          <a href="#slideNumber1" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#socialmediamarketing" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+        </div>
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev snowdriftTObottom"> -->
       </section>
-      <!-- slide 3 -->
-      <section class="slide slide1" id="socialmediamarketing">
-        <div class="slide__burger burger" id="burger">
+      <section class="slide uniq2 bg2_2" id="slideNumber2">
+        <!-- <div class="slide__burger burger" id="burger">
           <div class="burger__lineBlock">
             <div class="burger__line"></div>
             <div class="burger__line"></div>
             <div class="burger__line"></div>
           </div>
+        </div> -->
+
+        <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
+        <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
+        <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
+        <img src="images/my/bg/upperline.png" alt="upper line" class="slide__upperline">
+        <img src="images/my/logo_nectarin.png" alt="logo nectarin" class="slide__logo slide__logo_small">
+
+        <div class="slide__numof">
+          <p class="slide__cur">2</p>
+          <p class="slide__of">/ 84</p>
         </div>
-        
+
+        <div class="uniq2__content">
+          <h2 class="uniq2__title">КОРОТКО О НОВОМ ВЫПУСКЕ</h2>
+          <p class="mainP mainP_fs24"> На этот раз мы решили обратить внимание на основные тенденции<br> и события
+            рекламного бизнеса, которыми запомнился 2019 год.</p>
+          <p class="mainP mainP_fs24">Не забыли добавить про новые технологии продвижения, новые инструменты, изменения
+            в работе мессенджеров или социальных сетях.</p>
+          <p class="mainP mainP_fs24">Ну и немного информации об ожидаемых трендах 2020 года.</p>
+        </div>
+
+        <div class="slide__buttons">
+          <a href="#slideNumber1" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#socialmediamarketing" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+        </div>
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev snowdriftTObottom"> -->
+      </section>
+      <!-- slide 3 -->
+      <section class="slide slide1 bg3" id="socialmediamarketing">
+        <!-- <div class="slide__burger burger" id="burger">
+          <div class="burger__lineBlock">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+          </div>
+        </div> -->
+
         <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
         <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
         <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
@@ -118,18 +216,74 @@
         <img src="images/my/bg/ellipse.png" alt="ellipse" class="slide__ellipse">
         <img src="images/my/logo_nectarin_2.png" alt="logo nectarin" class="slide__logo slide__logo_big">
         <h2 class="slide1__title">SOCIAL MEDIA<br> MARKETING</h2>
-        <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift snowdriftTObottom">
+
+        <div class="slide__buttons">
+          <a href="#slideNumber2" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#slideNumber4" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="slide__numof">
+          <p class="slide__cur">3</p>
+          <p class="slide__of">/ 84</p>
+        </div>
+
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift snowdriftTObottom"> -->
       </section>
-      <!-- slide 4 -->
-      <section class="slide slide2">
-        <div class="slide__burger burger" id="burger">
+      <section class="slide slide1 bg3_2" id="socialmediamarketing">
+        <!-- <div class="slide__burger burger" id="burger">
           <div class="burger__lineBlock">
             <div class="burger__line"></div>
             <div class="burger__line"></div>
             <div class="burger__line"></div>
           </div>
+        </div> -->
+
+        <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
+        <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
+        <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
+        <img src="images/my/bg/upperline.png" alt="upper line" class="slide__upperline">
+        <img src="images/my/bg/ellipse.png" alt="ellipse" class="slide__ellipse">
+        <img src="images/my/logo_nectarin_2.png" alt="logo nectarin" class="slide__logo slide__logo_big">
+        <h2 class="slide1__title">SOCIAL MEDIA<br> MARKETING</h2>
+
+        <div class="slide__buttons">
+          <a href="#slideNumber2" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#slideNumber4" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
         </div>
-        
+
+        <div class="slide__numof">
+          <p class="slide__cur">3</p>
+          <p class="slide__of">/ 84</p>
+        </div>
+
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift snowdriftTObottom"> -->
+      </section>
+      <!-- slide 4 -->
+      <section class="slide slide2 slide4video bg4" id="slideNumber4">
+        <!-- <div class="slide__burger burger" id="burger">
+          <div class="burger__lineBlock">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+          </div>
+        </div> -->
+
         <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
         <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
         <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
@@ -159,22 +313,98 @@
               в маркетинге. И в рекламной индустрии эти технологии очень пригодятся.</p>
           </div>
           <div class="slide2__right">
-            <img src="images/my/video_4.png" alt="" class="slide2__img">
+            <video loop="" autoplay="" poster="video/poster.png" class="slide4video__video">
+              <source data-src="video/media1.mp4" src="" type="video/mp4">
+            </video>
             <div class="button slide2__button">Смотреть</div>
           </div>
         </div>
-        <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev">
+
+        <div class="slide__buttons">
+          <a href="#slideNumber3" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#slideNumber5" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+        </div>
+
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev"> -->
       </section>
-      <!-- slide 5 -->
-      <section class="slide slide2">
-        <div class="slide__burger burger" id="burger">
+      <section class="slide slide2 slide4video bg4_2" id="slideNumber4">
+        <!-- <div class="slide__burger burger" id="burger">
           <div class="burger__lineBlock">
             <div class="burger__line"></div>
             <div class="burger__line"></div>
             <div class="burger__line"></div>
           </div>
+        </div> -->
+
+        <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
+        <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
+        <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
+        <img src="images/my/bg/upperline.png" alt="upper line" class="slide__upperline">
+        <img src="images/my/logo_nectarin.png" alt="logo nectarin" class="slide__logo slide__logo_small">
+
+        <div class="slide__numof">
+          <p class="slide__cur">4</p>
+          <p class="slide__of">/ 84</p>
         </div>
-        
+
+        <h2 class="slide2__title">5G-сети</h2>
+        <div class="slide2__content">
+          <div class="slide2__left">
+            <p class="mainP mainP_margin-top25 slide2_boldAnd_mt-0"> Внедрение сетей передачи данных нового поколения
+              позволит передавать
+              больший объем информации за меньшее время.</p>
+            <p class="mainP mainP_margin-top25">5G-сети позволяют достигать порядка 20-30 Гбит/сек., а также
+              поддерживают огромное количество подключений.</p>
+            <p class="mainP mainP_margin-top25">Данный фактор позволит использовать более мощные и качественные
+              технологии на смартфонах.</p>
+            <p class="mainP mainP_margin-top25">В мае этого года на бейсбольный чемпионат в Южной Корее прилетел дракон,
+              которого создали с помощью 5G и AR-технологий. Голографическое изображение было вызвано
+              к «жизни» с помощью технологий дополненной реальности, а значит, люди на стадионе могли
+              видеть дракона через специальные устройства или приложения на смартфоне.</p>
+            <p class="mainP mainP_margin-top25">AR, VR, AI и другие развивающиеся технологии шагнут на новый уровень
+              в маркетинге. И в рекламной индустрии эти технологии очень пригодятся.</p>
+          </div>
+          <div class="slide2__right">
+            <video loop="" autoplay="" poster="video/poster.png" class="slide4video__video">
+              <source data-src="video/media1.mp4" src="" type="video/mp4">
+            </video>
+            <div class="button slide2__button">Смотреть</div>
+          </div>
+        </div>
+
+        <div class="slide__buttons">
+          <a href="#slideNumber3" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#slideNumber5" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+        </div>
+
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev"> -->
+      </section>
+      <!-- slide 5 -->
+      <section class="slide slide2" id="slideNumber5">
+        <!-- <div class="slide__burger burger" id="burger">
+          <div class="burger__lineBlock">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+          </div>
+        </div> -->
+
         <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
         <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
         <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
@@ -212,18 +442,32 @@
             <img src="images/my/6.png" alt="voice assistant" class="slide2__img_slide5">
           </div>
         </div>
-        <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift">
+
+        <div class="slide__buttons">
+          <a href="#slideNumber4" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#slideNumber6" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+        </div>
+
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift"> -->
       </section>
       <!-- slide 6 -->
-      <section class="slide slide3">
-        <div class="slide__burger burger" id="burger">
+      <section class="slide slide3" id="slideNumber6">
+        <!-- <div class="slide__burger burger" id="burger">
           <div class="burger__lineBlock">
             <div class="burger__line"></div>
             <div class="burger__line"></div>
             <div class="burger__line"></div>
           </div>
-        </div>
-        
+        </div> -->
+
         <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
         <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
         <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
@@ -255,18 +499,32 @@
             </p>
           </div>
         </div>
-        <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev">
+
+        <div class="slide__buttons">
+          <a href="#slideNumber5" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#slideNumber7" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+        </div>
+
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev"> -->
       </section>
       <!-- slide 7 -->
-      <section class="slide slide2">
-        <div class="slide__burger burger" id="burger">
+      <section class="slide slide2" id="slideNumber7">
+        <!--  <div class="slide__burger burger" id="burger">
           <div class="burger__lineBlock">
             <div class="burger__line"></div>
             <div class="burger__line"></div>
             <div class="burger__line"></div>
           </div>
-        </div>
-        
+        </div> -->
+
         <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
         <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
         <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
@@ -299,18 +557,32 @@
             <img src="images/my/8.jpg" alt="" class="slide2__img">
           </div>
         </div>
-        <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev">
+
+        <div class="slide__buttons">
+          <a href="#slideNumber6" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#slideNumber8" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+        </div>
+
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev"> -->
       </section>
       <!-- slide 8 -->
-      <section class="slide slide2">
-        <div class="slide__burger burger" id="burger">
+      <section class="slide slide2" id="slideNumber8">
+        <!-- <div class="slide__burger burger" id="burger">
           <div class="burger__lineBlock">
             <div class="burger__line"></div>
             <div class="burger__line"></div>
             <div class="burger__line"></div>
           </div>
-        </div>
-        
+        </div> -->
+
         <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
         <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
         <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
@@ -344,18 +616,32 @@
             <img src="images/my/9.jpg" alt="" class="slide2__img">
           </div>
         </div>
-        <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev">
+
+        <div class="slide__buttons">
+          <a href="#slideNumber7" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#slideNumber9" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+        </div>
+
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev"> -->
       </section>
       <!-- slide 9 -->
-      <section class="slide slide2">
-        <div class="slide__burger burger" id="burger">
+      <section class="slide slide2" id="slideNumber9">
+        <!-- <div class="slide__burger burger" id="burger">
           <div class="burger__lineBlock">
             <div class="burger__line"></div>
             <div class="burger__line"></div>
             <div class="burger__line"></div>
           </div>
-        </div>
-        
+        </div> -->
+
         <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
         <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
         <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
@@ -390,18 +676,32 @@
             <img src="images/my/10.jpg" alt="" class="slide2__img">
           </div>
         </div>
-        <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev">
+
+        <div class="slide__buttons">
+          <a href="#slideNumber8" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#searchandcontext" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+        </div>
+
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift slide__snowdrift_rev"> -->
       </section>
       <!-- slide 10 -->
       <section class="slide slide1" id="searchandcontext">
-        <div class="slide__burger burger" id="burger">
+        <!-- <div class="slide__burger burger" id="burger">
           <div class="burger__lineBlock">
             <div class="burger__line"></div>
             <div class="burger__line"></div>
             <div class="burger__line"></div>
           </div>
-        </div>
-        
+        </div> -->
+
         <img src="images/my/bg/leftArrow.png" alt="left Arrow" class="slide__leftArrow">
         <img src="images/my/bg/rightArrow.png" alt="right Arrow" class="slide__rightArrow">
         <img src="images/my/bg/upperDots.png" alt="upper dots" class="slide__upperDots">
@@ -409,7 +709,26 @@
         <img src="images/my/bg/ellipse.png" alt="ellipse" class="slide__ellipse">
         <img src="images/my/logo_nectarin_2.png" alt="logo nectarin" class="slide__logo slide__logo_big">
         <h2 class="slide1__title">Search and<br> Context</h2>
-        <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift snowdriftTObottom">
+
+        <div class="slide__numof">
+          <p class="slide__cur">10</p>
+          <p class="slide__of">/ 84</p>
+        </div>
+
+        <div class="slide__buttons">
+          <a href="#slideNumber9" class="slide__button slide__button_left">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+          <a href="#slideNumber11" class="slide__button slide__button_right">
+            <svg>
+              <use xlink:href="svgSprite/sprite.svg#chevron"></use>
+            </svg>
+          </a>
+        </div>
+
+        <!-- <img src="images/my/bg/snowdrift.png" alt="snowdrift" class="slide__snowdrift snowdriftTObottom"> -->
       </section>
 
       <!-- slide 5 -->
